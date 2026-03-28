@@ -159,3 +159,27 @@ VerificationTest[
 ,
   TestID -> "BraheSemimajorAxisFromMeanMotion-Numeric"
 ]
+
+VerificationTest[
+  Brahe`BraheGeoSemimajorAxis[]
+,
+  Quantity[42164172.355, "Meters"]
+,
+  {}
+,
+  SameTest -> (Abs[QuantityMagnitude[#1] - QuantityMagnitude[#2]] < 1*^-1 &)
+,
+  TestID -> "BraheGeoSemimajorAxis-Numeric"
+]
+
+VerificationTest[
+  Brahe`BraheSunSynchronousInclination[7000000.0, 0.0]
+,
+  Quantity[1.7082214228, "Radians"]
+,
+  {}
+,
+  SameTest -> (Abs[QuantityMagnitude[#1] - QuantityMagnitude[#2]] < 1*^-6 &)
+,
+  TestID -> "BraheSunSynchronousInclination-Numeric"
+]

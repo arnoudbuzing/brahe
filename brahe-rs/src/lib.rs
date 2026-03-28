@@ -121,3 +121,13 @@ fn BraheSemimajorAxisFromMeanMotion(n: f64) -> f64 {
 fn BraheSemimajorAxisFromMeanMotionGeneral(n: f64, gm: f64) -> f64 {
     semimajor_axis_general(n, gm, AngleFormat::Radians)
 }
+
+#[wll::export]
+fn BraheGeoSemimajorAxis() -> f64 {
+    geo_sma()
+}
+
+#[wll::export]
+fn BraheSunSynchronousInclination(a: f64, e: f64) -> f64 {
+    sun_synchronous_inclination(a, e, AngleFormat::Radians)
+}
