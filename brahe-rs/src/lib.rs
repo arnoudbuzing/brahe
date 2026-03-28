@@ -131,3 +131,10 @@ fn BraheGeoSemimajorAxis() -> f64 {
 fn BraheSunSynchronousInclination(a: f64, e: f64) -> f64 {
     sun_synchronous_inclination(a, e, AngleFormat::Radians)
 }
+
+#[wll::export]
+fn BraheOrbitalPeriodFromStateV2(state: &wll::NumericArray<f64>, gm: f64) -> f64 {
+    let state_slice = state.as_slice();
+    let state_vec = nalgebra::Vector6::from_column_slice(state_slice);
+    orbital_period_from_state(&state_vec, gm)
+}

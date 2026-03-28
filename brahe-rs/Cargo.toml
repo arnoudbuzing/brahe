@@ -9,6 +9,7 @@ crate-type = ["cdylib"]
 [dependencies]
 brahe = "1.2.0"
 wolfram-library-link = "0.2.10"
+nalgebra = "0.34"
 
 [profile.release]
 opt-level = 3

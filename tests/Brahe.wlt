@@ -183,3 +183,15 @@ VerificationTest[
 ,
   TestID -> "BraheSunSynchronousInclination-Numeric"
 ]
+
+VerificationTest[
+  Brahe`BraheOrbitalPeriodFromState[{7000000.0, 0, 0, 0, 7546.05328691501, 0}, 3.986004415*^14]
+,
+  Quantity[5828.51664, "Seconds"]
+,
+  {}
+,
+  SameTest -> (Abs[QuantityMagnitude[#1] - QuantityMagnitude[#2]] < 1*^-5 &)
+,
+  TestID -> "BraheOrbitalPeriodFromState-Numeric"
+]
