@@ -135,3 +135,27 @@ VerificationTest[
 ,
   TestID -> "BraheAnomaly-MeanTrue-Identity"
 ]
+
+VerificationTest[
+  Brahe`BraheSemimajorAxisFromPeriod[5828.51664]
+,
+  Quantity[7.*^6, "Meters"]
+,
+  {}
+,
+  SameTest -> (Abs[QuantityMagnitude[#1] - QuantityMagnitude[#2]] < 1*^-2 &)
+,
+  TestID -> "BraheSemimajorAxisFromPeriod-Numeric"
+]
+
+VerificationTest[
+  Brahe`BraheSemimajorAxisFromMeanMotion[0.0010780076124668337]
+,
+  Quantity[7.*^6, "Meters"]
+,
+  {}
+,
+  SameTest -> (Abs[QuantityMagnitude[#1] - QuantityMagnitude[#2]] < 1*^-2 &)
+,
+  TestID -> "BraheSemimajorAxisFromMeanMotion-Numeric"
+]

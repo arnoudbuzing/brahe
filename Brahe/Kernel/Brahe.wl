@@ -20,6 +20,10 @@ BraheAnomalyTrueToEccentric::usage = "BraheAnomalyTrueToEccentric[nu, e] convert
 BraheAnomalyEccentricToTrue::usage = "BraheAnomalyEccentricToTrue[enm, e] converts eccentric anomaly 'enm' [rad] to true anomaly for an orbit with eccentricity 'e'.";
 BraheAnomalyTrueToMean::usage = "BraheAnomalyTrueToMean[nu, e] converts true anomaly 'nu' [rad] to mean anomaly for an orbit with eccentricity 'e'.";
 BraheAnomalyMeanToTrue::usage = "BraheAnomalyMeanToTrue[m, e] converts mean anomaly 'm' [rad] to true anomaly for an orbit with eccentricity 'e'.";
+BraheSemimajorAxisFromPeriod::usage = "BraheSemimajorAxisFromPeriod[period] computes the semi-major axis for a given orbital period 'period' [s] around Earth.";
+BraheSemimajorAxisFromPeriodGeneral::usage = "BraheSemimajorAxisFromPeriodGeneral[period, gm] computes the semi-major axis for a given orbital period 'period' [s] and gravitational parameter 'gm' [m^3/s^2].";
+BraheSemimajorAxisFromMeanMotion::usage = "BraheSemimajorAxisFromMeanMotion[n] computes the semi-major axis for a given mean motion 'n' [rad/s] around Earth.";
+BraheSemimajorAxisFromMeanMotionGeneral::usage = "BraheSemimajorAxisFromMeanMotionGeneral[n, gm] computes the semi-major axis for a given mean motion 'n' [rad/s] and gravitational parameter 'gm' [m^3/s^2].";
 
 Begin["`Private`"];
 
@@ -65,6 +69,10 @@ If[$braheLib =!= $Failed,
   $iBraheAnomalyEccentricToTrue = LibraryFunctionLoad[$braheLib, "BraheAnomalyEccentricToTrue", {Real, Real}, Real];
   $iBraheAnomalyTrueToMean = LibraryFunctionLoad[$braheLib, "BraheAnomalyTrueToMean", {Real, Real}, Real];
   $iBraheAnomalyMeanToTrue = LibraryFunctionLoad[$braheLib, "BraheAnomalyMeanToTrue", {Real, Real}, Real];
+  $iBraheSemimajorAxisFromPeriod = LibraryFunctionLoad[$braheLib, "BraheSemimajorAxisFromPeriod", {Real}, Real];
+  $iBraheSemimajorAxisFromPeriodGeneral = LibraryFunctionLoad[$braheLib, "BraheSemimajorAxisFromPeriodGeneral", {Real, Real}, Real];
+  $iBraheSemimajorAxisFromMeanMotion = LibraryFunctionLoad[$braheLib, "BraheSemimajorAxisFromMeanMotion", {Real}, Real];
+  $iBraheSemimajorAxisFromMeanMotionGeneral = LibraryFunctionLoad[$braheLib, "BraheSemimajorAxisFromMeanMotionGeneral", {Real, Real}, Real];
 
   BraheOrbitalPeriod[a_?NumericQ] := Quantity[$iBraheOrbitalPeriod[a], "Seconds"];
   BraheOrbitalPeriod[a_Quantity] := Quantity[$iBraheOrbitalPeriod[QuantityMagnitude[UnitConvert[a, "Meters"]]], "Seconds"];
@@ -137,6 +145,22 @@ If[$braheLib =!= $Failed,
 
   BraheAnomalyMeanToTrue[m_?NumericQ, e_?NumericQ] := Quantity[$iBraheAnomalyMeanToTrue[m, e], "Radians"];
   BraheAnomalyMeanToTrue[m_Quantity, e_?NumericQ] := Quantity[$iBraheAnomalyMeanToTrue[QuantityMagnitude[UnitConvert[m, "Radians"]], e], "Radians"];
+
+  BraheSemimajorAxisFromPeriod[period_?NumericQ] := Quantity[$iBraheSemimajorAxisFromPeriod[period], "Meters"];
+  BraheSemimajorAxisFromPeriod[period_Quantity] := Quantity[$iBraheSemimajorAxisFromPeriod[QuantityMagnitude[UnitConvert[period, "Seconds"]]], "Meters"];
+
+  BraheSemimajorAxisFromPeriodGeneral[period_?NumericQ, gm_?NumericQ] := Quantity[$iBraheSemimajorAxisFromPeriodGeneral[period, gm], "Meters"];
+  BraheSemimajorAxisFromPeriodGeneral[period_Quantity, gm_?NumericQ] := Quantity[$iBraheSemimajorAxisFromPeriodGeneral[QuantityMagnitude[UnitConvert[period, "Seconds"]], gm], "Meters"];
+  BraheSemimajorAxisFromPeriodGeneral[period_?NumericQ, gm_Quantity] := Quantity[$iBraheSemimajorAxisFromPeriodGeneral[period, QuantityMagnitude[UnitConvert[gm, "Meters"^3/"Seconds"^2]]], "Meters"];
+  BraheSemimajorAxisFromPeriodGeneral[period_Quantity, gm_Quantity] := Quantity[$iBraheSemimajorAxisFromPeriodGeneral[QuantityMagnitude[UnitConvert[period, "Seconds"]], QuantityMagnitude[UnitConvert[gm, "Meters"^3/"Seconds"^2]]], "Meters"];
+
+  BraheSemimajorAxisFromMeanMotion[n_?NumericQ] := Quantity[$iBraheSemimajorAxisFromMeanMotion[n], "Meters"];
+  BraheSemimajorAxisFromMeanMotion[n_Quantity] := Quantity[$iBraheSemimajorAxisFromMeanMotion[QuantityMagnitude[UnitConvert[n, "Radians"/"Seconds"]]], "Meters"];
+
+  BraheSemimajorAxisFromMeanMotionGeneral[n_?NumericQ, gm_?NumericQ] := Quantity[$iBraheSemimajorAxisFromMeanMotionGeneral[n, gm], "Meters"];
+  BraheSemimajorAxisFromMeanMotionGeneral[n_Quantity, gm_?NumericQ] := Quantity[$iBraheSemimajorAxisFromMeanMotionGeneral[QuantityMagnitude[UnitConvert[n, "Radians"/"Seconds"]], gm], "Meters"];
+  BraheSemimajorAxisFromMeanMotionGeneral[n_?NumericQ, gm_Quantity] := Quantity[$iBraheSemimajorAxisFromMeanMotionGeneral[n, QuantityMagnitude[UnitConvert[gm, "Meters"^3/"Seconds"^2]]], "Meters"];
+  BraheSemimajorAxisFromMeanMotionGeneral[n_Quantity, gm_Quantity] := Quantity[$iBraheSemimajorAxisFromMeanMotionGeneral[QuantityMagnitude[UnitConvert[n, "Radians"/"Seconds"]], QuantityMagnitude[UnitConvert[gm, "Meters"^3/"Seconds"^2]]], "Meters"];
 ,
   Print["Warning: Brahe library not found at: ", braheLibraryPath[]];
 ];

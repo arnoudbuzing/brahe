@@ -101,3 +101,23 @@ fn BraheAnomalyTrueToMean(nu: f64, e: f64) -> f64 {
 fn BraheAnomalyMeanToTrue(m: f64, e: f64) -> f64 {
     anomaly_mean_to_true(m, e, AngleFormat::Radians).unwrap()
 }
+
+#[wll::export]
+fn BraheSemimajorAxisFromPeriod(period: f64) -> f64 {
+    semimajor_axis_from_orbital_period(period)
+}
+
+#[wll::export]
+fn BraheSemimajorAxisFromPeriodGeneral(period: f64, gm: f64) -> f64 {
+    semimajor_axis_from_orbital_period_general(period, gm)
+}
+
+#[wll::export]
+fn BraheSemimajorAxisFromMeanMotion(n: f64) -> f64 {
+    semimajor_axis(n, AngleFormat::Radians)
+}
+
+#[wll::export]
+fn BraheSemimajorAxisFromMeanMotionGeneral(n: f64, gm: f64) -> f64 {
+    semimajor_axis_general(n, gm, AngleFormat::Radians)
+}
