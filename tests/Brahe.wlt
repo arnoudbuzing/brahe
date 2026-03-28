@@ -195,3 +195,24 @@ VerificationTest[
 ,
   TestID -> "BraheOrbitalPeriodFromState-Numeric"
 ]
+
+VerificationTest[
+  ListQ[Brahe`BraheCelesTrakQuery["stations"]],
+  True,
+  TestID -> "BraheCelesTrakQuery-List"
+]
+
+VerificationTest[
+  Length[Brahe`BraheCelesTrakQuery["stations"]] > 0,
+  True,
+  TestID -> "BraheCelesTrakQuery-Length"
+]
+
+VerificationTest[
+  Module[{sats},
+    sats = Brahe`BraheCelesTrakQuery["stations"];
+    MemberQ[Lookup[sats, "NORAD_CAT_ID"], 25544 | 25544. | "25544"]
+  ],
+  True,
+  TestID -> "BraheCelesTrakQuery-Member"
+]

@@ -26,7 +26,8 @@ BraheSemimajorAxisFromMeanMotion::usage = "BraheSemimajorAxisFromMeanMotion[n] c
 BraheSemimajorAxisFromMeanMotionGeneral::usage = "BraheSemimajorAxisFromMeanMotionGeneral[n, gm] computes the semi-major axis for a given mean motion 'n' [rad/s] and gravitational parameter 'gm' [m^3/s^2].";
 BraheGeoSemimajorAxis::usage = "BraheGeoSemimajorAxis[] computes the semi-major axis of a geostationary orbit around Earth.";
 BraheSunSynchronousInclination::usage = "BraheSunSynchronousInclination[a, e] computes the inclination [rad] required for a sun-synchronous orbit with semi-major axis 'a' [m] and eccentricity 'e'.";
-BraheOrbitalPeriodFromState::usage = "BraheOrbitalPeriodFromState[state, gm] computes the orbital period [s] for a 6-element Cartesian state vector {x, y, z, vx, vy, vz}. Parameters 'state' (m, m/s) and 'gm' (m^3/s^2) can be lists of Quantity objects.";
+BraheOrbitalPeriodFromState::usage = "BraheOrbitalPeriodFromState[state, gm] returns the orbital period for a given 6-element Cartesian state vector and gravitational parameter.";
+BraheCelesTrakQuery::usage = "BraheCelesTrakQuery[group] downloads General Perturbations (GP) records from CelesTrak for a given group (e.g., \"stations\", \"active\", \"gnss\").";
 
 Begin["`Private`"];
 
@@ -178,14 +179,24 @@ If[$braheLib =!= $Failed,
   BraheOrbitalPeriodFromState[state_ /; (VectorQ[state] && AnyTrue[state, MatchQ[#, _Quantity] &]), gm_] :=
     Module[{magState},
       magState = Join[
-        QuantityMagnitude[UnitConvert[state[[1;;3]], "Meters"]],
-        QuantityMagnitude[UnitConvert[state[[4;;6]], "Meters"/"Seconds"]]
+        QuantityMagnitude[UnitConvert[Take[state, 3], "Meters"]],
+        QuantityMagnitude[UnitConvert[Drop[state, 3], "Meters"/"Seconds"]]
       ];
       BraheOrbitalPeriodFromState[magState, gm]
     ];
 ,
   Print["Warning: Brahe library not found at: ", braheLibraryPath[]];
 ];
+
+BraheCelesTrakQuery[group_String] := 
+  Module[{url, response},
+    url = "https://celestrak.org/NORAD/elements/gp.php?GROUP=" <> ToLowerCase[group] <> "&FORMAT=json";
+    response = URLRead[url, "Body"];
+    If[StringQ[response],
+      ImportString[response, "JSON"],
+      $Failed
+    ]
+  ];
 
 End[];
 EndPackage[];
