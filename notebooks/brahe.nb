@@ -1,0 +1,419 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     16043,        411]
+NotebookOptionsPosition[     14722,        380]
+NotebookOutlinePosition[     15114,        396]
+CellTagsIndexPosition[     15071,        393]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData["Quit"], "Input",
+ CellChangeTimes->{{3.983645980289222*^9, 3.9836459808330393`*^9}},
+ CellLabel->"In[70]:=",ExpressionUUID->"d01210b6-1cb0-4c43-b4c1-73018005f9b0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PacletDirectoryLoad", 
+  "[", "\"\</Users/arnoudb/github/brahe/Brahe\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.98364576587825*^9, 3.983645771274795*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"5840c29e-b974-4830-9cba-a7b567dc3371"],
+
+Cell[BoxData[
+ RowBox[{"{", "\<\"/Users/arnoudb/github/brahe/Brahe\"\>", "}"}]], "Output",
+ CellChangeTimes->{3.983645772295727*^9, 3.983645984769414*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"3507da1d-af2c-4f44-91d2-2f0cf0400cfa"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Get", "[", "\"\<Brahe`\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.98364576587825*^9, 3.983645779052314*^9}, {
+  3.983645975733477*^9, 3.983645976071755*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"aff28b20-1e72-4cfb-b8b7-550fb068701b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "BraheOrbitalPeriod"}]], "Input",
+ CellChangeTimes->{{3.983645786273883*^9, 3.983645786567836*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"a9548ce8-ec6c-4a87-8cf7-09e98ab31c51"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = False, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox[
+             TagBox[
+              TooltipBox[
+               StyleBox["\<\" Symbol\"\>", "InformationRowLabel",
+                StripOnInput->False],
+               "\"Symbol\"",
+               TooltipStyle->"TextStyling"],
+              Annotation[#, "Symbol", "Tooltip"]& ], "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"BraheOrbitalPeriod[a] computes the orbital period \
+for a semi-major axis 'a' [m].\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[
+           TagBox[GridBox[{
+              {
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  StyleBox["\<\" Definitions\"\>", "InformationRowLabel",
+                   StripOnInput->False],
+                  "\"Definitions\"",
+                  TooltipStyle->"TextStyling"],
+                 Annotation[#, "Definitions", "Tooltip"]& ], "DialogStyle",
+                StripOnInput->False]},
+              {
+               TemplateBox[{"\"\[ThinSpace]\"", 
+                 GridBox[{{
+                    RowBox[{
+                    RowBox[{"BraheOrbitalPeriod", "[", 
+                    RowBox[{"Brahe`Private`a_", "?", "NumericQ"}], "]"}], 
+                    ":=", 
+                    
+                    RowBox[{
+                    "Brahe`Private`$iBraheOrbitalPeriod", "[", 
+                    "Brahe`Private`a", "]"}]}]}, {" "}, {
+                    RowBox[{
+                    
+                    RowBox[{
+                    "BraheOrbitalPeriod", "[", "Brahe`Private`a_Quantity", 
+                    "]"}], ":=", 
+                    RowBox[{"Quantity", "[", 
+                    RowBox[{
+                    RowBox[{"Brahe`Private`$iBraheOrbitalPeriod", "[", 
+                    RowBox[{"QuantityMagnitude", "[", 
+                    RowBox[{"UnitConvert", "[", 
+                    RowBox[{"Brahe`Private`a", ",", "\"Meters\""}], "]"}], 
+                    "]"}], "]"}], ",", "\"Seconds\""}], "]"}]}]}, {" "}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
+                "RowDefault"]}
+             },
+             DefaultBaseStyle->"Column",
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Column"],
+           FrameMargins->{{6, 0}, {3, 6}}], "\<\"\"\>"},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"Brahe`BraheOrbitalPeriod\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->{{6, 6}, {6, 3}}], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          LightDarkSwitched[
+           GrayLevel[0.8]], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox[
+             TagBox[
+              TooltipBox[
+               StyleBox["\<\" Symbol\"\>", "InformationRowLabel",
+                StripOnInput->False],
+               "\"Symbol\"",
+               TooltipStyle->"TextStyling"],
+              Annotation[#, "Symbol", "Tooltip"]& ], "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"BraheOrbitalPeriod[a] computes the orbital period \
+for a semi-major axis 'a' [m].\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{10., {1.143798828125, 8.856201171875}}], True->
+              
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{10., {1.143798828125, 8.856201171875}}]}, 
+              Dynamic[System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          LightDarkSwitched[
+           GrayLevel[0.8]], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[<|
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "BraheOrbitalPeriod[a] computes the orbital period for a semi-major axis \
+'a' [m].", "Documentation" -> None, "OwnValues" -> None, "UpValues" -> None, 
+    "DownValues" -> 
+    Information`InformationValueForm[
+     DownValues, Brahe`BraheOrbitalPeriod, {Brahe`BraheOrbitalPeriod[
+         PatternTest[
+          Pattern[Brahe`Private`a, 
+           Blank[]], NumericQ]] :> 
+       Brahe`Private`$iBraheOrbitalPeriod[Brahe`Private`a], 
+       Brahe`BraheOrbitalPeriod[
+         Pattern[Brahe`Private`a, 
+          Blank[Quantity]]] :> Quantity[
+         Brahe`Private`$iBraheOrbitalPeriod[
+          QuantityMagnitude[
+           UnitConvert[Brahe`Private`a, "Meters"]]], "Seconds"]}], 
+    "SubValues" -> None, "DefaultValues" -> None, "NValues" -> None, 
+    "FormatValues" -> None, "Options" -> None, "Attributes" -> {}, "FullName" -> 
+    "Brahe`BraheOrbitalPeriod"|>, False]]], "Output",
+ CellChangeTimes->{3.983645786992744*^9, 3.983645987473566*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"acd05693-bc32-480a-9b8e-2bbd38136e5c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   RowBox[{"BraheOrbitalPeriod", "[", 
+    RowBox[{"Quantity", "[", 
+     RowBox[{"7000", ",", "\"\<Kilometers\>\""}], "]"}], "]"}], " ", 
+   ",", "\"\<Minutes\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.98364576587825*^9, 3.983645779052314*^9}, {
+  3.983645992850255*^9, 3.983646037355761*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"447e090a-ba99-4853-983f-80c71579caa3"],
+
+Cell[BoxData[
+ TemplateBox[{"97.14194399798973`", "\"min\"", "minutes", "\"Minutes\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{{3.983645990871489*^9, 3.983646040481848*^9}},
+ CellLabel->"Out[8]=",ExpressionUUID->"9ca34a15-2ab2-4d5a-8c9b-7a418468fa65"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   RowBox[{"Quantity", "[", 
+    RowBox[{"5828.52", ",", "\"\<Seconds\>\""}], "]"}], 
+   ",", "\"\<Minutes\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.983645820883724*^9, 3.983645835442718*^9}},
+ CellLabel->"In[68]:=",ExpressionUUID->"88e49a4c-bbcd-4951-934c-b95df89664b7"],
+
+Cell[BoxData[
+ TemplateBox[{"97.14200000000001`", "\"min\"", "minutes", "\"Minutes\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{{3.98364582647904*^9, 3.983645835731234*^9}},
+ CellLabel->"Out[68]=",ExpressionUUID->"fe508dbc-3ce0-4433-9fc3-c35fa5db8a1c"]
+}, Open  ]]
+},
+WindowSize->{808, 794},
+WindowMargins->{{220, Automatic}, {Automatic, 4}},
+FrontEndVersion->"14.3 for Mac OS X ARM (64-bit) (July 8, 2025)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"e7678050-e497-40e5-8ad1-be05d1685106"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[554, 20, 177, 2, 29, "Input",ExpressionUUID->"d01210b6-1cb0-4c43-b4c1-73018005f9b0"],
+Cell[CellGroupData[{
+Cell[756, 26, 258, 4, 29, "Input",ExpressionUUID->"5840c29e-b974-4830-9cba-a7b567dc3371"],
+Cell[1017, 32, 232, 3, 33, "Output",ExpressionUUID->"3507da1d-af2c-4f44-91d2-2f0cf0400cfa"]
+}, Open  ]],
+Cell[1264, 38, 261, 4, 29, "Input",ExpressionUUID->"aff28b20-1e72-4cfb-b8b7-550fb068701b"],
+Cell[CellGroupData[{
+Cell[1550, 46, 205, 3, 29, "Input",ExpressionUUID->"a9548ce8-ec6c-4a87-8cf7-09e98ab31c51"],
+Cell[1758, 51, 11592, 288, 89, "Output",ExpressionUUID->"acd05693-bc32-480a-9b8e-2bbd38136e5c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13387, 344, 431, 9, 29, "Input",ExpressionUUID->"447e090a-ba99-4853-983f-80c71579caa3"],
+Cell[13821, 355, 257, 4, 33, "Output",ExpressionUUID->"9ca34a15-2ab2-4d5a-8c9b-7a418468fa65"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14115, 364, 331, 7, 29, "Input",ExpressionUUID->"88e49a4c-bbcd-4951-934c-b95df89664b7"],
+Cell[14449, 373, 257, 4, 33, "Output",ExpressionUUID->"fe508dbc-3ce0-4433-9fc3-c35fa5db8a1c"]
+}, Open  ]]
+}
+]
+*)
+
