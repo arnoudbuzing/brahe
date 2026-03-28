@@ -71,3 +71,33 @@ fn BrahePerigeeAltitude(a: f64, e: f64) -> f64 {
 fn BraheApogeeAltitude(a: f64, e: f64) -> f64 {
     apogee_altitude(a, e)
 }
+
+#[wll::export]
+fn BraheAnomalyMeanToEccentric(m: f64, e: f64) -> f64 {
+    anomaly_mean_to_eccentric(m, e, AngleFormat::Radians).unwrap()
+}
+
+#[wll::export]
+fn BraheAnomalyEccentricToMean(enm: f64, e: f64) -> f64 {
+    anomaly_eccentric_to_mean(enm, e, AngleFormat::Radians)
+}
+
+#[wll::export]
+fn BraheAnomalyTrueToEccentric(nu: f64, e: f64) -> f64 {
+    anomaly_true_to_eccentric(nu, e, AngleFormat::Radians)
+}
+
+#[wll::export]
+fn BraheAnomalyEccentricToTrue(enm: f64, e: f64) -> f64 {
+    anomaly_eccentric_to_true(enm, e, AngleFormat::Radians)
+}
+
+#[wll::export]
+fn BraheAnomalyTrueToMean(nu: f64, e: f64) -> f64 {
+    anomaly_true_to_mean(nu, e, AngleFormat::Radians)
+}
+
+#[wll::export]
+fn BraheAnomalyMeanToTrue(m: f64, e: f64) -> f64 {
+    anomaly_mean_to_true(m, e, AngleFormat::Radians).unwrap()
+}

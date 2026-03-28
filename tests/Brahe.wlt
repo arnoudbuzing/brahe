@@ -99,3 +99,39 @@ VerificationTest[
 ,
   TestID -> "BraheApogeeAltitude-Numeric"
 ]
+
+VerificationTest[
+  Brahe`BraheAnomalyMeanToEccentric[1.0, 0.1]
+,
+  Quantity[1.0885977523978936, "Radians"]
+,
+  {}
+,
+  SameTest -> (Abs[QuantityMagnitude[#1] - QuantityMagnitude[#2]] < 1*^-8 &)
+,
+  TestID -> "BraheAnomalyMeanToEccentric-Numeric"
+]
+
+VerificationTest[
+  Brahe`BraheAnomalyEccentricToMean[Brahe`BraheAnomalyMeanToEccentric[1.0, 0.1], 0.1]
+,
+  Quantity[1.0, "Radians"]
+,
+  {}
+,
+  SameTest -> (Abs[QuantityMagnitude[#1] - QuantityMagnitude[#2]] < 1*^-8 &)
+,
+  TestID -> "BraheAnomaly-MeanEccentric-Identity"
+]
+
+VerificationTest[
+  Brahe`BraheAnomalyTrueToMean[Brahe`BraheAnomalyMeanToTrue[1.0, 0.1], 0.1]
+,
+  Quantity[1.0, "Radians"]
+,
+  {}
+,
+  SameTest -> (Abs[QuantityMagnitude[#1] - QuantityMagnitude[#2]] < 1*^-8 &)
+,
+  TestID -> "BraheAnomaly-MeanTrue-Identity"
+]

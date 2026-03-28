@@ -14,6 +14,12 @@ BrahePeriapsisAltitude::usage = "BrahePeriapsisAltitude[a, e, rBody] computes th
 BraheApoapsisAltitude::usage = "BraheApoapsisAltitude[a, e, rBody] computes the apoapsis altitude for a semi-major axis 'a' [m], eccentricity 'e', and body radius 'rBody' [m].";
 BrahePerigeeAltitude::usage = "BrahePerigeeAltitude[a, e] computes the perigee altitude for a semi-major axis 'a' [m] and eccentricity 'e'.";
 BraheApogeeAltitude::usage = "BraheApogeeAltitude[a, e] computes the apogee altitude for a semi-major axis 'a' [m] and eccentricity 'e'.";
+BraheAnomalyMeanToEccentric::usage = "BraheAnomalyMeanToEccentric[m, e] converts mean anomaly 'm' [rad] to eccentric anomaly for an orbit with eccentricity 'e'.";
+BraheAnomalyEccentricToMean::usage = "BraheAnomalyEccentricToMean[enm, e] converts eccentric anomaly 'enm' [rad] to mean anomaly for an orbit with eccentricity 'e'.";
+BraheAnomalyTrueToEccentric::usage = "BraheAnomalyTrueToEccentric[nu, e] converts true anomaly 'nu' [rad] to eccentric anomaly for an orbit with eccentricity 'e'.";
+BraheAnomalyEccentricToTrue::usage = "BraheAnomalyEccentricToTrue[enm, e] converts eccentric anomaly 'enm' [rad] to true anomaly for an orbit with eccentricity 'e'.";
+BraheAnomalyTrueToMean::usage = "BraheAnomalyTrueToMean[nu, e] converts true anomaly 'nu' [rad] to mean anomaly for an orbit with eccentricity 'e'.";
+BraheAnomalyMeanToTrue::usage = "BraheAnomalyMeanToTrue[m, e] converts mean anomaly 'm' [rad] to true anomaly for an orbit with eccentricity 'e'.";
 
 Begin["`Private`"];
 
@@ -53,6 +59,12 @@ If[$braheLib =!= $Failed,
   $iBraheApoapsisAltitude = LibraryFunctionLoad[$braheLib, "BraheApoapsisAltitude", {Real, Real, Real}, Real];
   $iBrahePerigeeAltitude = LibraryFunctionLoad[$braheLib, "BrahePerigeeAltitude", {Real, Real}, Real];
   $iBraheApogeeAltitude = LibraryFunctionLoad[$braheLib, "BraheApogeeAltitude", {Real, Real}, Real];
+  $iBraheAnomalyMeanToEccentric = LibraryFunctionLoad[$braheLib, "BraheAnomalyMeanToEccentric", {Real, Real}, Real];
+  $iBraheAnomalyEccentricToMean = LibraryFunctionLoad[$braheLib, "BraheAnomalyEccentricToMean", {Real, Real}, Real];
+  $iBraheAnomalyTrueToEccentric = LibraryFunctionLoad[$braheLib, "BraheAnomalyTrueToEccentric", {Real, Real}, Real];
+  $iBraheAnomalyEccentricToTrue = LibraryFunctionLoad[$braheLib, "BraheAnomalyEccentricToTrue", {Real, Real}, Real];
+  $iBraheAnomalyTrueToMean = LibraryFunctionLoad[$braheLib, "BraheAnomalyTrueToMean", {Real, Real}, Real];
+  $iBraheAnomalyMeanToTrue = LibraryFunctionLoad[$braheLib, "BraheAnomalyMeanToTrue", {Real, Real}, Real];
 
   BraheOrbitalPeriod[a_?NumericQ] := Quantity[$iBraheOrbitalPeriod[a], "Seconds"];
   BraheOrbitalPeriod[a_Quantity] := Quantity[$iBraheOrbitalPeriod[QuantityMagnitude[UnitConvert[a, "Meters"]]], "Seconds"];
@@ -107,6 +119,24 @@ If[$braheLib =!= $Failed,
 
   BraheApogeeAltitude[a_?NumericQ, e_?NumericQ] := Quantity[$iBraheApogeeAltitude[a, e], "Meters"];
   BraheApogeeAltitude[a_Quantity, e_?NumericQ] := Quantity[$iBraheApogeeAltitude[QuantityMagnitude[UnitConvert[a, "Meters"]], e], "Meters"];
+
+  BraheAnomalyMeanToEccentric[m_?NumericQ, e_?NumericQ] := Quantity[$iBraheAnomalyMeanToEccentric[m, e], "Radians"];
+  BraheAnomalyMeanToEccentric[m_Quantity, e_?NumericQ] := Quantity[$iBraheAnomalyMeanToEccentric[QuantityMagnitude[UnitConvert[m, "Radians"]], e], "Radians"];
+
+  BraheAnomalyEccentricToMean[enm_?NumericQ, e_?NumericQ] := Quantity[$iBraheAnomalyEccentricToMean[enm, e], "Radians"];
+  BraheAnomalyEccentricToMean[enm_Quantity, e_?NumericQ] := Quantity[$iBraheAnomalyEccentricToMean[QuantityMagnitude[UnitConvert[enm, "Radians"]], e], "Radians"];
+
+  BraheAnomalyTrueToEccentric[nu_?NumericQ, e_?NumericQ] := Quantity[$iBraheAnomalyTrueToEccentric[nu, e], "Radians"];
+  BraheAnomalyTrueToEccentric[nu_Quantity, e_?NumericQ] := Quantity[$iBraheAnomalyTrueToEccentric[QuantityMagnitude[UnitConvert[nu, "Radians"]], e], "Radians"];
+
+  BraheAnomalyEccentricToTrue[enm_?NumericQ, e_?NumericQ] := Quantity[$iBraheAnomalyEccentricToTrue[enm, e], "Radians"];
+  BraheAnomalyEccentricToTrue[enm_Quantity, e_?NumericQ] := Quantity[$iBraheAnomalyEccentricToTrue[QuantityMagnitude[UnitConvert[enm, "Radians"]], e], "Radians"];
+
+  BraheAnomalyTrueToMean[nu_?NumericQ, e_?NumericQ] := Quantity[$iBraheAnomalyTrueToMean[nu, e], "Radians"];
+  BraheAnomalyTrueToMean[nu_Quantity, e_?NumericQ] := Quantity[$iBraheAnomalyTrueToMean[QuantityMagnitude[UnitConvert[nu, "Radians"]], e], "Radians"];
+
+  BraheAnomalyMeanToTrue[m_?NumericQ, e_?NumericQ] := Quantity[$iBraheAnomalyMeanToTrue[m, e], "Radians"];
+  BraheAnomalyMeanToTrue[m_Quantity, e_?NumericQ] := Quantity[$iBraheAnomalyMeanToTrue[QuantityMagnitude[UnitConvert[m, "Radians"]], e], "Radians"];
 ,
   Print["Warning: Brahe library not found at: ", braheLibraryPath[]];
 ];
