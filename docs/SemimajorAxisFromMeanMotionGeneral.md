@@ -1,4 +1,4 @@
-# BraheSemimajorAxisFromMeanMotionGeneral
+# SemimajorAxisFromMeanMotionGeneral
 
 ## Description
 
@@ -6,7 +6,7 @@ This function computes the semi-major axis for an orbit around a general body wi
 
 ## Usage
 
-BraheSemimajorAxisFromMeanMotionGeneral[n, gm] computes the semi-major axis for an orbit with mean motion `n` around a body with gravitational parameter `gm`.
+SemimajorAxisFromMeanMotionGeneral[n, gm] computes the semi-major axis for an orbit with mean motion `n` around a body with gravitational parameter `gm`.
 
 ## Notes
 
@@ -23,13 +23,13 @@ The function returns the semi-major axis as a Quantity object with units of "Met
 Compute the semi-major axis for a mean motion of 0.00107800761 rad/s around Earth:
 
 ```wolfram
-BraheSemimajorAxisFromMeanMotionGeneral[0.00107800761, 3.986004415*^14]
+SemimajorAxisFromMeanMotionGeneral[0.00107800761, 3.986004415*^14]
 (* Quantity[7.*10^6, "Meters"] *)
 ```
 
 Compute the semi-major axis for a mean motion of 1.0 degree per minute around Earth:
 
 ```wolfram
-BraheSemimajorAxisFromMeanMotionGeneral[Quantity[1.0, "Degrees"/"Minutes"], 3.986004415*^14]
+SemimajorAxisFromMeanMotionGeneral[Quantity[1.0, "Degrees"/"Minutes"], 3.986004415*^14]
 (* Quantity[5.07147*10^7, "Meters"] *)
 ```

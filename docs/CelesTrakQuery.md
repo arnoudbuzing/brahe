@@ -1,6 +1,6 @@
-# BraheCelesTrakQuery
+# CelesTrakQuery
 
-`BraheCelesTrakQuery[group]` downloads General Perturbations (GP) records from CelesTrak for a given group.
+`CelesTrakQuery[group]` downloads General Perturbations (GP) records from CelesTrak for a given group.
 
 ## Arguments
 
@@ -25,14 +25,14 @@ A list of associations, where each association represents a satellite record (OM
 
 ### Download Station Data
 ```wolfram
-records = BraheCelesTrakQuery["stations"];
+records = CelesTrakQuery["stations"];
 First[records]
 (* <| "OBJECT_NAME" -> "ISS (ZARYA)", "NORAD_CAT_ID" -> 25544, ... |> *)
 ```
 
 ### Find GPS Satellites
 ```wolfram
-gps = BraheCelesTrakQuery["gps"];
+gps = CelesTrakQuery["gps"];
 Select[gps, StringContainsQ[#["OBJECT_NAME"], "GPS"] &]
 ```
 

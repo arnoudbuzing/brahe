@@ -1,4 +1,4 @@
-# BrahePeriapsisAltitude
+# PeriapsisAltitude
 
 ## Description
 
@@ -6,7 +6,7 @@ This function computes the periapsis altitude for an orbit with semi-major axis 
 
 ## Usage
 
-BrahePeriapsisAltitude[a, e, rBody] computes the periapsis altitude for an orbit with semi-major axis `a`, eccentricity `e`, and body radius `rBody`.
+PeriapsisAltitude[a, e, rBody] computes the periapsis altitude for an orbit with semi-major axis `a`, eccentricity `e`, and body radius `rBody`.
 
 ## Notes
 
@@ -25,13 +25,13 @@ The function returns the periapsis altitude as a Quantity object with units of "
 Compute the periapsis altitude for a semi-major axis of 7,000,000 meters, eccentricity 0.1, and Earth's radius:
 
 ```wolfram
-BrahePeriapsisAltitude[7000000.0, 0.1, 6378136.3]
+PeriapsisAltitude[7000000.0, 0.1, 6378136.3]
 (* Quantity[-78136.3, "Meters"] *)
 ```
 
 Compute the periapsis altitude using Quantity objects:
 
 ```wolfram
-BrahePeriapsisAltitude[Quantity[7000, "Kilometers"], 0.1, Quantity[6378.1363, "Kilometers"]]
+PeriapsisAltitude[Quantity[7000, "Kilometers"], 0.1, Quantity[6378.1363, "Kilometers"]]
 (* Quantity[-78136.3, "Meters"] *)
 ```

@@ -1,4 +1,4 @@
-# BraheMeanMotionGeneral
+# MeanMotionGeneral
 
 ## Description
 
@@ -6,7 +6,7 @@ This function computes the mean motion for an orbit with semi-major axis `a` aro
 
 ## Usage
 
-BraheMeanMotionGeneral[a, gm] computes the mean motion for an orbit with semi-major axis `a` and gravitational parameter `gm`.
+MeanMotionGeneral[a, gm] computes the mean motion for an orbit with semi-major axis `a` and gravitational parameter `gm`.
 
 ## Notes
 
@@ -23,13 +23,13 @@ The function returns the mean motion as a Quantity object with units of "Radians
 Compute the mean motion for a semi-major axis of 7,000,000 meters and Earth's standard gravitational parameter:
 
 ```wolfram
-BraheMeanMotionGeneral[7000000.0, 3.986004415*^14]
+MeanMotionGeneral[7000000.0, 3.986004415*^14]
 (* Quantity[0.001078007612, ("Radians")/("Seconds")] *)
 ```
 
 Compute the mean motion using Quantity objects for both the semi-major axis and the gravitational parameter:
 
 ```wolfram
-BraheMeanMotionGeneral[Quantity[7000, "Kilometers"], Quantity[3.986004415*^14, "Meters"^3/"Seconds"^2]]
+MeanMotionGeneral[Quantity[7000, "Kilometers"], Quantity[3.986004415*^14, "Meters"^3/"Seconds"^2]]
 (* Quantity[0.001078007612, ("Radians")/("Seconds")] *)
 ```

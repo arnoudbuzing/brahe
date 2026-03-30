@@ -1,4 +1,4 @@
-# BraheApogeeAltitude
+# ApogeeAltitude
 
 ## Description
 
@@ -6,7 +6,7 @@ This function computes the apogee altitude for an orbit with semi-major axis `a`
 
 ## Usage
 
-BraheApogeeAltitude[a, e] computes the apogee altitude for an orbit with semi-major axis `a` and eccentricity `e`.
+ApogeeAltitude[a, e] computes the apogee altitude for an orbit with semi-major axis `a` and eccentricity `e`.
 
 ## Notes
 
@@ -23,13 +23,13 @@ The function returns the apogee altitude as a Quantity object with units of "Met
 Compute the apogee altitude for a semi-major axis of 7,000,000 meters and eccentricity 0.1:
 
 ```wolfram
-BraheApogeeAltitude[7000000.0, 0.1]
+ApogeeAltitude[7000000.0, 0.1]
 (* Quantity[1321863.7, "Meters"] *)
 ```
 
 Compute the apogee altitude using a Quantity object:
 
 ```wolfram
-BraheApogeeAltitude[Quantity[7000, "Kilometers"], 0.1]
+ApogeeAltitude[Quantity[7000, "Kilometers"], 0.1]
 (* Quantity[1321863.7, "Meters"] *)
 ```

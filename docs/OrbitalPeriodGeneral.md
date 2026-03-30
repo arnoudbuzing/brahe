@@ -1,4 +1,4 @@
-# BraheOrbitalPeriodGeneral
+# OrbitalPeriodGeneral
 
 ## Description
 
@@ -6,7 +6,7 @@ This function computes the orbital period of a body in a circular orbit with sem
 
 ## Usage
 
-BraheOrbitalPeriodGeneral[a, gm] computes the orbital period of a body with semi-major axis `a` and gravitational parameter `gm`.
+OrbitalPeriodGeneral[a, gm] computes the orbital period of a body with semi-major axis `a` and gravitational parameter `gm`.
 
 ## Notes
 
@@ -23,13 +23,13 @@ The function returns the orbital period as a Quantity object with units of "Seco
 Compute the orbital period for a semi-major axis of 7,000,000 meters and Earth's standard gravitational parameter:
 
 ```wolfram
-BraheOrbitalPeriodGeneral[7000000.0, 3.986004418*^14]
+OrbitalPeriodGeneral[7000000.0, 3.986004418*^14]
 (* Quantity[5828.516637686015, "Seconds"] *)
 ```
 
 Compute the orbital period using Quantity objects for both the semi-major axis and the gravitational parameter:
 
 ```wolfram
-BraheOrbitalPeriodGeneral[Quantity[7000, "Kilometers"], Quantity[3.986004418*^14, "Meters"^3/"Seconds"^2]]
+OrbitalPeriodGeneral[Quantity[7000, "Kilometers"], Quantity[3.986004418*^14, "Meters"^3/"Seconds"^2]]
 (* Quantity[5828.516637686015, "Seconds"] *)
 ```

@@ -5,7 +5,7 @@ VerificationTest[
   ,
     Print["Failed to load Brahe`"]
   ];
-  Brahe`BraheOrbitalPeriod[7000000.0]
+  Brahe`OrbitalPeriod[7000000.0]
 ,
   Quantity[5828.516639879384`, "Seconds"]
 ,
@@ -13,11 +13,11 @@ VerificationTest[
 ,
   SameTest -> (Abs[QuantityMagnitude[#1] - QuantityMagnitude[#2]] < 1*^-8 &)
 ,
-  TestID -> "BraheOrbitalPeriod-LEO"
+  TestID -> "OrbitalPeriod-LEO"
 ]
 
 VerificationTest[
-  Brahe`BraheOrbitalPeriodGeneral[7000000.0, 3.986004418*^14]
+  Brahe`OrbitalPeriodGeneral[7000000.0, 3.986004418*^14]
 ,
   Quantity[5828.516637686015`, "Seconds"]
 ,
@@ -25,11 +25,11 @@ VerificationTest[
 ,
   SameTest -> (Abs[QuantityMagnitude[#1] - QuantityMagnitude[#2]] < 1*^-8 &)
 ,
-  TestID -> "BraheOrbitalPeriodGeneral-LEO"
+  TestID -> "OrbitalPeriodGeneral-LEO"
 ]
 
 VerificationTest[
-  Brahe`BraheOrbitalPeriod[Quantity[7000, "Kilometers"]]
+  Brahe`OrbitalPeriod[Quantity[7000, "Kilometers"]]
 ,
   Quantity[5828.516639879384`, "Seconds"]
 ,
@@ -37,11 +37,11 @@ VerificationTest[
 ,
   SameTest -> (Abs[QuantityMagnitude[#1] - QuantityMagnitude[#2]] < 1*^-8 &)
 ,
-  TestID -> "BraheOrbitalPeriod-Quantity"
+  TestID -> "OrbitalPeriod-Quantity"
 ]
 
 VerificationTest[
-  Brahe`BrahePeriapsisDistance[Quantity[7000, "Kilometers"], 0.1]
+  Brahe`PeriapsisDistance[Quantity[7000, "Kilometers"], 0.1]
 ,
   Quantity[6300000.0, "Meters"]
 ,
@@ -49,11 +49,11 @@ VerificationTest[
 ,
   SameTest -> (Abs[QuantityMagnitude[#1] - QuantityMagnitude[#2]] < 1*^-8 &)
 ,
-  TestID -> "BrahePeriapsisDistance-Quantity"
+  TestID -> "PeriapsisDistance-Quantity"
 ]
 
 VerificationTest[
-  Brahe`BraheApoapsisDistance[7000000.0, 0.1]
+  Brahe`ApoapsisDistance[7000000.0, 0.1]
 ,
   Quantity[7700000.0, "Meters"]
 ,
@@ -61,11 +61,11 @@ VerificationTest[
 ,
   SameTest -> (Abs[QuantityMagnitude[#1] - QuantityMagnitude[#2]] < 1*^-8 &)
 ,
-  TestID -> "BraheApoapsisDistance-Numeric"
+  TestID -> "ApoapsisDistance-Numeric"
 ]
 
 VerificationTest[
-  Brahe`BraheMeanMotion[7000000.0]
+  Brahe`MeanMotion[7000000.0]
 ,
   Quantity[0.0010780076124668337, ("Radians")/("Seconds")]
 ,
@@ -73,11 +73,11 @@ VerificationTest[
 ,
   SameTest -> (Abs[QuantityMagnitude[#1] - QuantityMagnitude[#2]] < 1*^-10 &)
 ,
-  TestID -> "BraheMeanMotion-Numeric"
+  TestID -> "MeanMotion-Numeric"
 ]
 
 VerificationTest[
-  Brahe`BrahePerigeeVelocity[7000000.0, 0.1]
+  Brahe`PerigeeVelocity[7000000.0, 0.1]
 ,
   Quantity[8342.475800631788, ("Meters")/("Seconds")]
 ,
@@ -85,11 +85,11 @@ VerificationTest[
 ,
   SameTest -> (Abs[QuantityMagnitude[#1] - QuantityMagnitude[#2]] < 1*^-6 &)
 ,
-  TestID -> "BrahePerigeeVelocity-Numeric"
+  TestID -> "PerigeeVelocity-Numeric"
 ]
 
 VerificationTest[
-  Brahe`BraheApogeeAltitude[7000000.0, 0.1]
+  Brahe`ApogeeAltitude[7000000.0, 0.1]
 ,
   Quantity[1321863.7, "Meters"]
 ,
@@ -97,11 +97,11 @@ VerificationTest[
 ,
   SameTest -> (Abs[QuantityMagnitude[#1] - QuantityMagnitude[#2]] < 1*^-1 &)
 ,
-  TestID -> "BraheApogeeAltitude-Numeric"
+  TestID -> "ApogeeAltitude-Numeric"
 ]
 
 VerificationTest[
-  Brahe`BraheAnomalyMeanToEccentric[1.0, 0.1]
+  Brahe`AnomalyMeanToEccentric[1.0, 0.1]
 ,
   Quantity[1.0885977523978936, "Radians"]
 ,
@@ -109,11 +109,11 @@ VerificationTest[
 ,
   SameTest -> (Abs[QuantityMagnitude[#1] - QuantityMagnitude[#2]] < 1*^-8 &)
 ,
-  TestID -> "BraheAnomalyMeanToEccentric-Numeric"
+  TestID -> "AnomalyMeanToEccentric-Numeric"
 ]
 
 VerificationTest[
-  Brahe`BraheAnomalyEccentricToMean[Brahe`BraheAnomalyMeanToEccentric[1.0, 0.1], 0.1]
+  Brahe`AnomalyEccentricToMean[Brahe`AnomalyMeanToEccentric[1.0, 0.1], 0.1]
 ,
   Quantity[1.0, "Radians"]
 ,
@@ -121,11 +121,11 @@ VerificationTest[
 ,
   SameTest -> (Abs[QuantityMagnitude[#1] - QuantityMagnitude[#2]] < 1*^-8 &)
 ,
-  TestID -> "BraheAnomaly-MeanEccentric-Identity"
+  TestID -> "Anomaly-MeanEccentric-Identity"
 ]
 
 VerificationTest[
-  Brahe`BraheAnomalyTrueToMean[Brahe`BraheAnomalyMeanToTrue[1.0, 0.1], 0.1]
+  Brahe`AnomalyTrueToMean[Brahe`AnomalyMeanToTrue[1.0, 0.1], 0.1]
 ,
   Quantity[1.0, "Radians"]
 ,
@@ -133,11 +133,11 @@ VerificationTest[
 ,
   SameTest -> (Abs[QuantityMagnitude[#1] - QuantityMagnitude[#2]] < 1*^-8 &)
 ,
-  TestID -> "BraheAnomaly-MeanTrue-Identity"
+  TestID -> "Anomaly-MeanTrue-Identity"
 ]
 
 VerificationTest[
-  Brahe`BraheSemimajorAxisFromPeriod[5828.51664]
+  Brahe`SemimajorAxisFromPeriod[5828.51664]
 ,
   Quantity[7.*^6, "Meters"]
 ,
@@ -145,11 +145,11 @@ VerificationTest[
 ,
   SameTest -> (Abs[QuantityMagnitude[#1] - QuantityMagnitude[#2]] < 1*^-2 &)
 ,
-  TestID -> "BraheSemimajorAxisFromPeriod-Numeric"
+  TestID -> "SemimajorAxisFromPeriod-Numeric"
 ]
 
 VerificationTest[
-  Brahe`BraheSemimajorAxisFromMeanMotion[0.0010780076124668337]
+  Brahe`SemimajorAxisFromMeanMotion[0.0010780076124668337]
 ,
   Quantity[7.*^6, "Meters"]
 ,
@@ -157,11 +157,11 @@ VerificationTest[
 ,
   SameTest -> (Abs[QuantityMagnitude[#1] - QuantityMagnitude[#2]] < 1*^-2 &)
 ,
-  TestID -> "BraheSemimajorAxisFromMeanMotion-Numeric"
+  TestID -> "SemimajorAxisFromMeanMotion-Numeric"
 ]
 
 VerificationTest[
-  Brahe`BraheGeoSemimajorAxis[]
+  Brahe`GeoSemimajorAxis[]
 ,
   Quantity[42164172.355, "Meters"]
 ,
@@ -169,11 +169,11 @@ VerificationTest[
 ,
   SameTest -> (Abs[QuantityMagnitude[#1] - QuantityMagnitude[#2]] < 1*^-1 &)
 ,
-  TestID -> "BraheGeoSemimajorAxis-Numeric"
+  TestID -> "GeoSemimajorAxis-Numeric"
 ]
 
 VerificationTest[
-  Brahe`BraheSunSynchronousInclination[7000000.0, 0.0]
+  Brahe`SunSynchronousInclination[7000000.0, 0.0]
 ,
   Quantity[1.7082214228, "Radians"]
 ,
@@ -181,11 +181,11 @@ VerificationTest[
 ,
   SameTest -> (Abs[QuantityMagnitude[#1] - QuantityMagnitude[#2]] < 1*^-6 &)
 ,
-  TestID -> "BraheSunSynchronousInclination-Numeric"
+  TestID -> "SunSynchronousInclination-Numeric"
 ]
 
 VerificationTest[
-  Brahe`BraheOrbitalPeriodFromState[{7000000.0, 0, 0, 0, 7546.05328691501, 0}, 3.986004415*^14]
+  Brahe`OrbitalPeriodFromState[{7000000.0, 0, 0, 0, 7546.05328691501, 0}, 3.986004415*^14]
 ,
   Quantity[5828.51664, "Seconds"]
 ,
@@ -193,26 +193,26 @@ VerificationTest[
 ,
   SameTest -> (Abs[QuantityMagnitude[#1] - QuantityMagnitude[#2]] < 1*^-5 &)
 ,
-  TestID -> "BraheOrbitalPeriodFromState-Numeric"
+  TestID -> "OrbitalPeriodFromState-Numeric"
 ]
 
 VerificationTest[
-  ListQ[Brahe`BraheCelesTrakQuery["stations"]],
+  And[ListQ[#], AllTrue[#, AssociationQ]]& @ Brahe`CelesTrakQuery["stations"],
   True,
-  TestID -> "BraheCelesTrakQuery-List"
+  TestID -> "CelesTrakQuery-Associations"
 ]
 
 VerificationTest[
-  Length[Brahe`BraheCelesTrakQuery["stations"]] > 0,
+  Length[Brahe`CelesTrakQuery["stations"]] > 0,
   True,
-  TestID -> "BraheCelesTrakQuery-Length"
+  TestID -> "CelesTrakQuery-Length"
 ]
 
 VerificationTest[
   Module[{sats},
-    sats = Brahe`BraheCelesTrakQuery["stations"];
+    sats = Brahe`CelesTrakQuery["stations"];
     MemberQ[Lookup[sats, "NORAD_CAT_ID"], 25544 | 25544. | "25544"]
   ],
   True,
-  TestID -> "BraheCelesTrakQuery-Member"
+  TestID -> "CelesTrakQuery-Member"
 ]

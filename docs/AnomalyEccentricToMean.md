@@ -1,4 +1,4 @@
-# BraheAnomalyEccentricToMean
+# AnomalyEccentricToMean
 
 ## Description
 
@@ -6,7 +6,7 @@ This function converts eccentric anomaly `enm` to mean anomaly for an orbit with
 
 ## Usage
 
-BraheAnomalyEccentricToMean[enm, e] converts eccentric anomaly `enm` to mean anomaly.
+AnomalyEccentricToMean[enm, e] converts eccentric anomaly `enm` to mean anomaly.
 
 ## Notes
 
@@ -21,6 +21,6 @@ The function returns the mean anomaly as a Quantity object with units of "Radian
 Convert an eccentric anomaly to mean anomaly:
 
 ```wolfram
-BraheAnomalyEccentricToMean[1.088597752, 0.1]
+AnomalyEccentricToMean[1.088597752, 0.1]
 (* Quantity[1.0, "Radians"] *)
 ```

@@ -1,4 +1,4 @@
-# BraheGeoSemimajorAxis
+# GeoSemimajorAxis
 
 ## Description
 
@@ -6,7 +6,7 @@ This function computes the theoretical semi-major axis for a geostationary orbit
 
 ## Usage
 
-BraheGeoSemimajorAxis[] returns the semi-major axis of a geostationary orbit.
+GeoSemimajorAxis[] returns the semi-major axis of a geostationary orbit.
 
 ## Notes
 
@@ -19,6 +19,6 @@ The calculation is based on the Earth's rotation rate and gravitational paramete
 Get the geostationary semi-major axis:
 
 ```wolfram
-BraheGeoSemimajorAxis[]
+GeoSemimajorAxis[]
 (* Quantity[4.21642*10^7, "Meters"] *)
 ```

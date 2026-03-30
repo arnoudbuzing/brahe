@@ -1,4 +1,4 @@
-# BraheAnomalyMeanToTrue
+# AnomalyMeanToTrue
 
 ## Description
 
@@ -6,7 +6,7 @@ This function converts mean anomaly `m` to true anomaly for an orbit with eccent
 
 ## Usage
 
-BraheAnomalyMeanToTrue[m, e] converts mean anomaly `m` to true anomaly.
+AnomalyMeanToTrue[m, e] converts mean anomaly `m` to true anomaly.
 
 ## Notes
 
@@ -21,6 +21,6 @@ The function returns the true anomaly as a Quantity object with units of "Radian
 Convert a mean anomaly to true anomaly:
 
 ```wolfram
-BraheAnomalyMeanToTrue[1.0, 0.1]
+AnomalyMeanToTrue[1.0, 0.1]
 (* Quantity[1.18247, "Radians"] *)
 ```

@@ -1,4 +1,4 @@
-# BraheMeanMotion
+# MeanMotion
 
 ## Description
 
@@ -6,7 +6,7 @@ This function computes the mean motion for an orbit with semi-major axis `a` aro
 
 ## Usage
 
-BraheMeanMotion[a] computes the mean motion for an orbit with semi-major axis `a`.
+MeanMotion[a] computes the mean motion for an orbit with semi-major axis `a`.
 
 ## Notes
 
@@ -21,13 +21,13 @@ The function returns the mean motion as a Quantity object with units of "Radians
 Compute the mean motion for a semi-major axis of 7,000,000 meters:
 
 ```wolfram
-BraheMeanMotion[7000000.0]
+MeanMotion[7000000.0]
 (* Quantity[0.001078007612, ("Radians")/("Seconds")] *)
 ```
 
 Compute the mean motion using a Quantity object for the semi-major axis:
 
 ```wolfram
-BraheMeanMotion[Quantity[7000, "Kilometers"]]
+MeanMotion[Quantity[7000, "Kilometers"]]
 (* Quantity[0.001078007612, ("Radians")/("Seconds")] *)
 ```

@@ -1,4 +1,4 @@
-# BraheOrbitalPeriod
+# OrbitalPeriod
 
 ## Description
 
@@ -6,7 +6,7 @@ This function computes the orbital period of a body in a circular orbit with sem
 
 ## Usage
 
-BraheOrbitalPeriod[a] computes the orbital period of a body in a circular orbit with semi-major axis `a`.
+OrbitalPeriod[a] computes the orbital period of a body in a circular orbit with semi-major axis `a`.
 
 ## Notes
 
@@ -21,14 +21,14 @@ The function returns the orbital period as a Quantity object with units of "Seco
 Compute the orbital period for a semi-major axis of 7,000,000 meters:
 
 ```wolfram
-BraheOrbitalPeriod[7000000.0]
+OrbitalPeriod[7000000.0]
 (* Quantity[5828.516639879384, "Seconds"] *)
 ```
 
 Compute the orbital period using a Quantity object for the semi-major axis:
 
 ```wolfram
-BraheOrbitalPeriod[Quantity[7000, "Kilometers"]]
+OrbitalPeriod[Quantity[7000, "Kilometers"]]
 (* Quantity[5828.516639879384, "Seconds"] *)
 ```
 

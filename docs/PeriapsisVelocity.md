@@ -1,4 +1,4 @@
-# BrahePeriapsisVelocity
+# PeriapsisVelocity
 
 ## Description
 
@@ -6,7 +6,7 @@ This function computes the periapsis velocity for an orbit with semi-major axis 
 
 ## Usage
 
-BrahePeriapsisVelocity[a, e, gm] computes the periapsis velocity for an orbit with semi-major axis `a`, eccentricity `e`, and gravitational parameter `gm`.
+PeriapsisVelocity[a, e, gm] computes the periapsis velocity for an orbit with semi-major axis `a`, eccentricity `e`, and gravitational parameter `gm`.
 
 ## Notes
 
@@ -25,13 +25,13 @@ The function returns the periapsis velocity as a Quantity object with units of "
 Compute the periapsis velocity for a semi-major axis of 7,000,000 meters, eccentricity 0.1, and Earth's standard gravitational parameter:
 
 ```wolfram
-BrahePeriapsisVelocity[7000000.0, 0.1, 3.986004415*^14]
+PeriapsisVelocity[7000000.0, 0.1, 3.986004415*^14]
 (* Quantity[8342.475801, ("Meters")/("Seconds")] *)
 ```
 
 Compute the periapsis velocity using Quantity objects:
 
 ```wolfram
-BrahePeriapsisVelocity[Quantity[7000, "Kilometers"], 0.1, Quantity[3.986004415*^14, "Meters"^3/"Seconds"^2]]
+PeriapsisVelocity[Quantity[7000, "Kilometers"], 0.1, Quantity[3.986004415*^14, "Meters"^3/"Seconds"^2]]
 (* Quantity[8342.475801, ("Meters")/("Seconds")] *)
 ```

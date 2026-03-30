@@ -1,4 +1,4 @@
-# BrahePerigeeAltitude
+# PerigeeAltitude
 
 ## Description
 
@@ -6,7 +6,7 @@ This function computes the perigee altitude for an orbit with semi-major axis `a
 
 ## Usage
 
-BrahePerigeeAltitude[a, e] computes the perigee altitude for an orbit with semi-major axis `a` and eccentricity `e`.
+PerigeeAltitude[a, e] computes the perigee altitude for an orbit with semi-major axis `a` and eccentricity `e`.
 
 ## Notes
 
@@ -23,13 +23,13 @@ The function returns the perigee altitude as a Quantity object with units of "Me
 Compute the perigee altitude for a semi-major axis of 7,000,000 meters and eccentricity 0.1:
 
 ```wolfram
-BrahePerigeeAltitude[7000000.0, 0.1]
+PerigeeAltitude[7000000.0, 0.1]
 (* Quantity[-78136.3, "Meters"] *)
 ```
 
 Compute the perigee altitude using a Quantity object:
 
 ```wolfram
-BrahePerigeeAltitude[Quantity[7000, "Kilometers"], 0.1]
+PerigeeAltitude[Quantity[7000, "Kilometers"], 0.1]
 (* Quantity[-78136.3, "Meters"] *)
 ```

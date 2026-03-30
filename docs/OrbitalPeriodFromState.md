@@ -1,4 +1,4 @@
-# BraheOrbitalPeriodFromState
+# OrbitalPeriodFromState
 
 ## Description
 
@@ -6,7 +6,7 @@ This function computes the orbital period for a given Cartesian state vector (po
 
 ## Usage
 
-BraheOrbitalPeriodFromState[state, gm] computes the orbital period [s] for a 6-element state vector `{x, y, z, vx, vy, vz}`.
+OrbitalPeriodFromState[state, gm] computes the orbital period [s] for a 6-element state vector `{x, y, z, vx, vy, vz}`.
 
 ## Notes
 
@@ -25,7 +25,7 @@ Compute the orbital period for a circular LEO orbit with 7000 km radius:
 ```wolfram
 state = {7000000.0, 0, 0, 0, 7546.05, 0};
 gm = 3.986004415*^14;
-BraheOrbitalPeriodFromState[state, gm]
+OrbitalPeriodFromState[state, gm]
 (* Quantity[5828.52, "Seconds"] *)
 ```
 
@@ -36,6 +36,6 @@ state = {
   Quantity[7000, "Kilometers"], Quantity[0, "Meters"], Quantity[0, "Meters"],
   Quantity[0, "Meters"/"Seconds"], Quantity[7.54605, "Kilometers"/"Seconds"], Quantity[0, "Meters"/"Seconds"]
 };
-BraheOrbitalPeriodFromState[state, Quantity[3.986*^14, "Meters"^3/"Seconds"^2]]
+OrbitalPeriodFromState[state, Quantity[3.986*^14, "Meters"^3/"Seconds"^2]]
 (* Quantity[5828.56, "Seconds"] *)
 ```

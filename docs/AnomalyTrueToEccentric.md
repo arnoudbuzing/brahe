@@ -1,4 +1,4 @@
-# BraheAnomalyTrueToEccentric
+# AnomalyTrueToEccentric
 
 ## Description
 
@@ -6,7 +6,7 @@ This function converts true anomaly `nu` to eccentric anomaly for an orbit with 
 
 ## Usage
 
-BraheAnomalyTrueToEccentric[nu, e] converts true anomaly `nu` to eccentric anomaly.
+AnomalyTrueToEccentric[nu, e] converts true anomaly `nu` to eccentric anomaly.
 
 ## Notes
 
@@ -21,6 +21,6 @@ The function returns the eccentric anomaly as a Quantity object with units of "R
 Convert a true anomaly to eccentric anomaly:
 
 ```wolfram
-BraheAnomalyTrueToEccentric[1.2, 0.1]
+AnomalyTrueToEccentric[1.2, 0.1]
 (* Quantity[1.10729, "Radians"] *)
 ```

@@ -1,4 +1,4 @@
-# BraheApoapsisDistance
+# ApoapsisDistance
 
 ## Description
 
@@ -6,7 +6,7 @@ This function computes the apoapsis distance for an orbit with semi-major axis `
 
 ## Usage
 
-BraheApoapsisDistance[a, e] computes the apoapsis distance for an orbit with semi-major axis `a` and eccentricity `e`.
+ApoapsisDistance[a, e] computes the apoapsis distance for an orbit with semi-major axis `a` and eccentricity `e`.
 
 ## Notes
 
@@ -23,13 +23,13 @@ The function returns the apoapsis distance as a Quantity object with units of "M
 Compute the apoapsis distance for a semi-major axis of 7,000,000 meters and eccentricity 0.1:
 
 ```wolfram
-BraheApoapsisDistance[7000000.0, 0.1]
+ApoapsisDistance[7000000.0, 0.1]
 (* Quantity[7700000.0, "Meters"] *)
 ```
 
 Compute the apoapsis distance using a Quantity object for the semi-major axis:
 
 ```wolfram
-BraheApoapsisDistance[Quantity[7000, "Kilometers"], 0.1]
+ApoapsisDistance[Quantity[7000, "Kilometers"], 0.1]
 (* Quantity[7700000.0, "Meters"] *)
 ```

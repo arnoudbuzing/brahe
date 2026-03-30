@@ -1,4 +1,4 @@
-# BrahePerigeeVelocity
+# PerigeeVelocity
 
 ## Description
 
@@ -6,7 +6,7 @@ This function computes the perigee velocity for an orbit with semi-major axis `a
 
 ## Usage
 
-BrahePerigeeVelocity[a, e] computes the perigee velocity for an orbit with semi-major axis `a` and eccentricity `e`.
+PerigeeVelocity[a, e] computes the perigee velocity for an orbit with semi-major axis `a` and eccentricity `e`.
 
 ## Notes
 
@@ -23,13 +23,13 @@ The function returns the perigee velocity as a Quantity object with units of "Me
 Compute the perigee velocity for a semi-major axis of 7,000,000 meters and eccentricity 0.1:
 
 ```wolfram
-BrahePerigeeVelocity[7000000.0, 0.1]
+PerigeeVelocity[7000000.0, 0.1]
 (* Quantity[8342.475801, ("Meters")/("Seconds")] *)
 ```
 
 Compute the perigee velocity using a Quantity object:
 
 ```wolfram
-BrahePerigeeVelocity[Quantity[7000, "Kilometers"], 0.1]
+PerigeeVelocity[Quantity[7000, "Kilometers"], 0.1]
 (* Quantity[8342.475801, ("Meters")/("Seconds")] *)
 ```

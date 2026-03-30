@@ -1,4 +1,4 @@
-# BraheSemimajorAxisFromPeriod
+# SemimajorAxisFromPeriod
 
 ## Description
 
@@ -6,7 +6,7 @@ This function computes the semi-major axis of an orbit around the Earth given it
 
 ## Usage
 
-BraheSemimajorAxisFromPeriod[period] computes the semi-major axis for a mission with orbital period `period`.
+SemimajorAxisFromPeriod[period] computes the semi-major axis for a mission with orbital period `period`.
 
 ## Notes
 
@@ -21,13 +21,13 @@ The function returns the semi-major axis as a Quantity object with units of "Met
 Compute the semi-major axis for an orbital period of 5828.51664 seconds:
 
 ```wolfram
-BraheSemimajorAxisFromPeriod[5828.51664]
+SemimajorAxisFromPeriod[5828.51664]
 (* Quantity[7.*10^6, "Meters"] *)
 ```
 
 Compute the semi-major axis for a 90-minute orbital period:
 
 ```wolfram
-BraheSemimajorAxisFromPeriod[Quantity[90, "Minutes"]]
+SemimajorAxisFromPeriod[Quantity[90, "Minutes"]]
 (* Quantity[6.65243*10^6, "Meters"] *)
 ```

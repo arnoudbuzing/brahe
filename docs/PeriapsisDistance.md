@@ -1,4 +1,4 @@
-# BrahePeriapsisDistance
+# PeriapsisDistance
 
 ## Description
 
@@ -6,7 +6,7 @@ This function computes the periapsis distance for an orbit with semi-major axis 
 
 ## Usage
 
-BrahePeriapsisDistance[a, e] computes the periapsis distance for an orbit with semi-major axis `a` and eccentricity `e`.
+PeriapsisDistance[a, e] computes the periapsis distance for an orbit with semi-major axis `a` and eccentricity `e`.
 
 ## Notes
 
@@ -23,13 +23,13 @@ The function returns the periapsis distance as a Quantity object with units of "
 Compute the periapsis distance for a semi-major axis of 7,000,000 meters and eccentricity 0.1:
 
 ```wolfram
-BrahePeriapsisDistance[7000000.0, 0.1]
+PeriapsisDistance[7000000.0, 0.1]
 (* Quantity[6300000.0, "Meters"] *)
 ```
 
 Compute the periapsis distance using a Quantity object for the semi-major axis:
 
 ```wolfram
-BrahePeriapsisDistance[Quantity[7000, "Kilometers"], 0.1]
+PeriapsisDistance[Quantity[7000, "Kilometers"], 0.1]
 (* Quantity[6300000.0, "Meters"] *)
 ```

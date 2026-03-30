@@ -1,0 +1,752 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 15.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     30788,        744]
+NotebookOptionsPosition[     27519,        681]
+NotebookOutlinePosition[     27912,        697]
+CellTagsIndexPosition[     27869,        694]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData["Quit"], "Input",
+ CellChangeTimes->{{3.9837030864967003`*^9, 3.983703086942645*^9}},
+ CellLabel->"In[28]:=",ExpressionUUID->"7167b919-b179-4277-b95b-98dba7be2aca"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PacletDirectoryLoad", 
+  "[", "\"\</Users/arnoudb/github/brahe/Brahe\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.983702436570745*^9, 3.98370245442666*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"04ab4cf7-c4a3-47d3-a7bf-892016814df7"],
+
+Cell[BoxData[
+ RowBox[{"{", "\<\"/Users/arnoudb/github/brahe/Brahe\"\>", "}"}]], "Output",
+ CellChangeTimes->{3.983702455062675*^9, 3.9837030921603937`*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"89720f3b-e49d-462a-b25b-ff0565f78fb8"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Brahe`\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.983702455473772*^9, 3.983702485689646*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"f4f077ae-4f79-40d8-a81a-ab8415a3dc6f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "Brahe`*"}]], "Input",
+ CellChangeTimes->{{3.9837025029276648`*^9, 3.983702505908814*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"bd647794-12f3-407d-abeb-5aee922206f4"],
+
+Cell[BoxData[
+ StyleBox[
+  FrameBox[GridBox[{
+     {
+      DynamicModuleBox[{Typeset`open$$ = True}, 
+       PaneSelectorBox[{False->
+        ButtonBox[
+         RowBox[{
+          
+          DynamicBox[FEPrivate`FrontEndResource[
+           "FEBitmaps", "RightPointerOpener"]], " ", 
+          StyleBox["Brahe`", "InformationGridGroupHeader"]}],
+         Appearance->None,
+         BaseStyle->"InformationGridLink",
+         ButtonFunction:>FEPrivate`Set[Typeset`open$$, True],
+         Evaluator->Automatic,
+         Method->"Preemptive"], True->
+        PaneBox[GridBox[{
+           {
+            ButtonBox[
+             RowBox[{
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{10., {2.134033203125, 7.865966796875}}], " ", 
+              
+              StyleBox["Brahe`", "InformationGridGroupHeader"]}],
+             Appearance->None,
+             BaseStyle->"InformationGridLink",
+             ButtonFunction:>FEPrivate`Set[Typeset`open$$, False],
+             Evaluator->Automatic,
+             Method->"Preemptive"]},
+           {
+            PaneBox[GridBox[{
+               {
+                ButtonBox[
+                 StyleBox["AnomalyEccentricToMean", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-1c844bcc-50b7-42a9-af88-cb77272c36b1", {
+                   "AnomalyEccentricToMean", "Brahe`"}, False},
+                 ButtonNote->"Brahe`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ApoapsisDistance", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-1c844bcc-50b7-42a9-af88-cb77272c36b1", {
+                   "ApoapsisDistance", "Brahe`"}, False},
+                 ButtonNote->"Brahe`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["MeanMotionGeneral", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-1c844bcc-50b7-42a9-af88-cb77272c36b1", {
+                   "MeanMotionGeneral", "Brahe`"}, False},
+                 ButtonNote->"Brahe`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["PerigeeAltitude", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-1c844bcc-50b7-42a9-af88-cb77272c36b1", {
+                   "PerigeeAltitude", "Brahe`"}, False},
+                 ButtonNote->"Brahe`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["AnomalyEccentricToTrue", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-1c844bcc-50b7-42a9-af88-cb77272c36b1", {
+                   "AnomalyEccentricToTrue", "Brahe`"}, False},
+                 ButtonNote->"Brahe`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ApoapsisVelocity", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-1c844bcc-50b7-42a9-af88-cb77272c36b1", {
+                   "ApoapsisVelocity", "Brahe`"}, False},
+                 ButtonNote->"Brahe`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["OrbitalPeriod", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-1c844bcc-50b7-42a9-af88-cb77272c36b1", {
+                   "OrbitalPeriod", "Brahe`"}, False},
+                 ButtonNote->"Brahe`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["PerigeeVelocity", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-1c844bcc-50b7-42a9-af88-cb77272c36b1", {
+                   "PerigeeVelocity", "Brahe`"}, False},
+                 ButtonNote->"Brahe`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["AnomalyMeanToEccentric", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-1c844bcc-50b7-42a9-af88-cb77272c36b1", {
+                   "AnomalyMeanToEccentric", "Brahe`"}, False},
+                 ButtonNote->"Brahe`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ApogeeAltitude", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-1c844bcc-50b7-42a9-af88-cb77272c36b1", {
+                   "ApogeeAltitude", "Brahe`"}, False},
+                 ButtonNote->"Brahe`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["OrbitalPeriodFromState", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-1c844bcc-50b7-42a9-af88-cb77272c36b1", {
+                   "OrbitalPeriodFromState", "Brahe`"}, False},
+                 ButtonNote->"Brahe`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 
+                 StyleBox["SemimajorAxisFromMeanMotion", 
+                  "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-1c844bcc-50b7-42a9-af88-cb77272c36b1", {
+                   "SemimajorAxisFromMeanMotion", "Brahe`"}, False},
+                 ButtonNote->"Brahe`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["AnomalyMeanToTrue", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-1c844bcc-50b7-42a9-af88-cb77272c36b1", {
+                   "AnomalyMeanToTrue", "Brahe`"}, False},
+                 ButtonNote->"Brahe`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ApogeeVelocity", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-1c844bcc-50b7-42a9-af88-cb77272c36b1", {
+                   "ApogeeVelocity", "Brahe`"}, False},
+                 ButtonNote->"Brahe`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["OrbitalPeriodGeneral", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-1c844bcc-50b7-42a9-af88-cb77272c36b1", {
+                   "OrbitalPeriodGeneral", "Brahe`"}, False},
+                 ButtonNote->"Brahe`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 
+                 StyleBox["SemimajorAxisFromMeanMotionGeneral", 
+                  "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-1c844bcc-50b7-42a9-af88-cb77272c36b1", {
+                   "SemimajorAxisFromMeanMotionGeneral", "Brahe`"}, False},
+                 ButtonNote->"Brahe`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["AnomalyTrueToEccentric", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-1c844bcc-50b7-42a9-af88-cb77272c36b1", {
+                   "AnomalyTrueToEccentric", "Brahe`"}, False},
+                 ButtonNote->"Brahe`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["CelesTrakQuery", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-1c844bcc-50b7-42a9-af88-cb77272c36b1", {
+                   "CelesTrakQuery", "Brahe`"}, False},
+                 ButtonNote->"Brahe`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["PeriapsisAltitude", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-1c844bcc-50b7-42a9-af88-cb77272c36b1", {
+                   "PeriapsisAltitude", "Brahe`"}, False},
+                 ButtonNote->"Brahe`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["SemimajorAxisFromPeriod", "InformationGridButton"],
+                 
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-1c844bcc-50b7-42a9-af88-cb77272c36b1", {
+                   "SemimajorAxisFromPeriod", "Brahe`"}, False},
+                 ButtonNote->"Brahe`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["AnomalyTrueToMean", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-1c844bcc-50b7-42a9-af88-cb77272c36b1", {
+                   "AnomalyTrueToMean", "Brahe`"}, False},
+                 ButtonNote->"Brahe`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["GeoSemimajorAxis", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-1c844bcc-50b7-42a9-af88-cb77272c36b1", {
+                   "GeoSemimajorAxis", "Brahe`"}, False},
+                 ButtonNote->"Brahe`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["PeriapsisDistance", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-1c844bcc-50b7-42a9-af88-cb77272c36b1", {
+                   "PeriapsisDistance", "Brahe`"}, False},
+                 ButtonNote->"Brahe`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 
+                 StyleBox["SemimajorAxisFromPeriodGeneral", 
+                  "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-1c844bcc-50b7-42a9-af88-cb77272c36b1", {
+                   "SemimajorAxisFromPeriodGeneral", "Brahe`"}, False},
+                 ButtonNote->"Brahe`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["ApoapsisAltitude", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-1c844bcc-50b7-42a9-af88-cb77272c36b1", {
+                   "ApoapsisAltitude", "Brahe`"}, False},
+                 ButtonNote->"Brahe`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["MeanMotion", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-1c844bcc-50b7-42a9-af88-cb77272c36b1", {
+                   "MeanMotion", "Brahe`"}, False},
+                 ButtonNote->"Brahe`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["PeriapsisVelocity", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-1c844bcc-50b7-42a9-af88-cb77272c36b1", {
+                   "PeriapsisVelocity", "Brahe`"}, False},
+                 ButtonNote->"Brahe`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 
+                 StyleBox["SunSynchronousInclination", 
+                  "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-1c844bcc-50b7-42a9-af88-cb77272c36b1", {
+                   "SunSynchronousInclination", "Brahe`"}, False},
+                 ButtonNote->"Brahe`",
+                 Evaluator->Automatic]}
+              },
+              DefaultBaseStyle->"Text",
+              
+              GridBoxAlignment->{
+               "Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+              GridBoxItemSize->{"Columns" -> {{
+                   Scaled[0.2375]}}}],
+             ImageMargins->{{10, 0}, {0, 2}}]}
+          },
+          GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+         FrameMargins->{{0, 0}, {8, 0}}]}, Dynamic[Typeset`open$$],
+        ImageSize->Automatic]]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+    GridBoxDividers->{"ColumnsIndexed" -> {{False}}, "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.8]}, 
+        Offset[0.2]}}],
+   BaseStyle->"InformationTitleFrame"], "InformationGridPlain"]], "Output",
+ CellChangeTimes->{3.9837025061784678`*^9, 3.983703097243637*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"919e0b20-c724-4148-8644-14daeb89aabb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"First", "[", 
+  RowBox[{"CelesTrakQuery", "[", "\"\<stations\>\"", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.983702513946662*^9, 3.983702529469263*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"ecc04c0c-6da2-419e-b3d1-c52101de5f99"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"OBJECT_NAME\"\>", "\[Rule]", "\<\"ISS (ZARYA)\"\>"}], ",", 
+   RowBox[{"\<\"OBJECT_ID\"\>", "\[Rule]", "\<\"1998-067A\"\>"}], ",", 
+   RowBox[{"\<\"EPOCH\"\>", "\[Rule]", "\<\"2026-03-28T03:57:10.438560\"\>"}],
+    ",", 
+   RowBox[{"\<\"MEAN_MOTION\"\>", "\[Rule]", "15.48601072`"}], ",", 
+   RowBox[{"\<\"ECCENTRICITY\"\>", "\[Rule]", "0.00062264`"}], ",", 
+   RowBox[{"\<\"INCLINATION\"\>", "\[Rule]", "51.6345`"}], ",", 
+   RowBox[{"\<\"RA_OF_ASC_NODE\"\>", "\[Rule]", "341.0267`"}], ",", 
+   RowBox[{"\<\"ARG_OF_PERICENTER\"\>", "\[Rule]", "240.9881`"}], ",", 
+   RowBox[{"\<\"MEAN_ANOMALY\"\>", "\[Rule]", "119.0483`"}], ",", 
+   RowBox[{"\<\"EPHEMERIS_TYPE\"\>", "\[Rule]", "0"}], ",", 
+   RowBox[{"\<\"CLASSIFICATION_TYPE\"\>", "\[Rule]", "\<\"U\"\>"}], ",", 
+   RowBox[{"\<\"NORAD_CAT_ID\"\>", "\[Rule]", "25544"}], ",", 
+   RowBox[{"\<\"ELEMENT_SET_NO\"\>", "\[Rule]", "999"}], ",", 
+   RowBox[{"\<\"REV_AT_EPOCH\"\>", "\[Rule]", "55919"}], ",", 
+   RowBox[{"\<\"BSTAR\"\>", "\[Rule]", "0.00024002995`"}], ",", 
+   RowBox[{"\<\"MEAN_MOTION_DOT\"\>", "\[Rule]", "0.00012619`"}], ",", 
+   RowBox[{"\<\"MEAN_MOTION_DDOT\"\>", "\[Rule]", "0"}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{{3.9837025201672497`*^9, 3.983702530070745*^9}, 
+   3.983703105225338*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"9a139e86-bef2-410c-b0c8-6c1b36a3c79a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"iss", "=", 
+    RowBox[{"First", "[", 
+     RowBox[{"CelesTrakQuery", "[", "\"\<stations\>\"", "]"}], "]"}]}], ";"}],
+   "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Convert", " ", "Mean", " ", "Motion", " ", "to", " ", "a", " ", 
+    "Quantity"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"n", "=", 
+    RowBox[{"Quantity", "[", 
+     RowBox[{
+      RowBox[{"2", " ", "Pi", " ", 
+       RowBox[{"iss", "[", "\"\<MEAN_MOTION\>\"", "]"}]}], ",", 
+      RowBox[{"\"\<Radians\>\"", "/", "\"\<Days\>\""}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Compute", " ", "Semi"}], "-", 
+    RowBox[{"major", " ", "Axis"}]}], "*)"}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"a", "=", 
+    RowBox[{"SemimajorAxisFromMeanMotion", "[", "n", "]"}]}], ";"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"Compute", " ", "Orbital", " ", "Period"}], "*)"}]}], "\n", 
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   RowBox[{"OrbitalPeriod", "[", "a", "]"}], ",", "\"\<Minutes\>\""}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.9837026245873737`*^9, 3.98370262458745*^9}, {
+  3.983703201788763*^9, 3.983703225804481*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"4bf3c035-4c00-4508-a182-391ca1136fb3"],
+
+Cell[BoxData[
+ TemplateBox[{"92.98714988878675`", "\"min\"", "minutes", "\"Minutes\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{
+  3.983702628216125*^9, 3.9837031136054363`*^9, {3.983703210290308*^9, 
+   3.9837032264583883`*^9}},
+ CellLabel->"Out[21]=",ExpressionUUID->"89ccfc25-c7b0-4e10-949d-4d425ff9bcc5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"e", "=", 
+    RowBox[{"iss", "[", "\"\<ECCENTRICITY\>\"", "]"}]}], ";"}], 
+  "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{"Calculate", " ", "specific", " ", "orbital", " ", "points"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"PeriapsisDistance", "[", 
+  RowBox[{"a", ",", "e"}], "]"}], "\n", 
+ RowBox[{"ApogeeAltitude", "[", 
+  RowBox[{"a", ",", "e"}], "]"}], "\n", 
+ RowBox[{"PerigeeVelocity", "[", 
+  RowBox[{"a", ",", "e"}], "]"}], "\n"}], "Input",
+ CellChangeTimes->{{3.983703270759371*^9, 3.9837032707594767`*^9}},
+ CellLabel->"In[22]:=",ExpressionUUID->"e4acda17-4782-4054-93a2-dca08e4a10ce"],
+
+Cell[BoxData[
+ TemplateBox[{"6.794721241362977`*^6", "\"m\"", "meters", "\"Meters\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{3.983703271890995*^9},
+ CellLabel->"Out[23]=",ExpressionUUID->"c64664ca-32de-4bc7-82ef-41f7d731516e"],
+
+Cell[BoxData[
+ TemplateBox[{"425051.54347556084`", "\"m\"", "meters", "\"Meters\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{3.98370327189214*^9},
+ CellLabel->"Out[24]=",ExpressionUUID->"3f80f116-961a-4fa7-a77c-cde393a3a786"],
+
+Cell[BoxData[
+ TemplateBox[{"7661.578013211444`", 
+   RowBox[{
+    "\"m\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", "\"s\""}], 
+   "meters per second", 
+   FractionBox["\"Meters\"", "\"Seconds\""]},
+  "Quantity"]], "Output",
+ CellChangeTimes->{3.983703271892754*^9},
+ CellLabel->"Out[25]=",ExpressionUUID->"b9651bb5-791b-431b-ba9f-92073b2b4a3a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   RowBox[{"ApogeeAltitude", "[", 
+    RowBox[{"a", ",", "e"}], "]"}], ",", "\"\<Miles\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.983703328533744*^9, 3.983703332759192*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"a180d17a-c86a-4f4d-b14c-fb7e2c801ebd"],
+
+Cell[BoxData[
+ TemplateBox[{"264.11478433172823`", "\"mi\"", "miles", "\"Miles\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{3.9837033330665627`*^9},
+ CellLabel->"Out[26]=",ExpressionUUID->"d7492b11-93b6-4dde-920b-f4430cf22eee"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Association", "[", "iss", "]"}], "[", "\"\<MEAN_MOTION\>\"", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.983702972033924*^9, 3.983702987305684*^9}},
+ CellLabel->"In[27]:=",ExpressionUUID->"9a9e5dd9-33a2-4a55-8f35-992b3e9d7019"],
+
+Cell[BoxData["15.48601072`"], "Output",
+ CellChangeTimes->{{3.983702977071925*^9, 3.983702987774822*^9}},
+ CellLabel->"Out[27]=",ExpressionUUID->"524c67d8-96bf-4a24-a117-4033327f3540"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"2.0", " ", "Pi", " ", 
+  RowBox[{"Association", "@@", 
+   RowBox[{"iss", "[", "\"\<MEAN_MOTION\>\"", "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.983702955918927*^9, 3.983702964532819*^9}},
+ CellLabel->"In[24]:=",ExpressionUUID->"8ed75dba-7f75-48a3-8914-6d9c79fb29d6"],
+
+Cell[BoxData[
+ RowBox[{"6.283185307179586`", " ", 
+  RowBox[{"Association", "[", "\<\"MEAN_MOTION\"\>", "]"}]}]], "Output",
+ CellChangeTimes->{{3.9837029338508263`*^9, 3.9837029648476877`*^9}},
+ CellLabel->"Out[24]=",ExpressionUUID->"7bc20394-9667-4788-bd60-c1f9607b630f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"iss", "[", "\"\<MEAN_MOTION\>\"", "]"}]], "Input",
+ CellLabel->"In[22]:=",ExpressionUUID->"df039d6b-0ae8-4940-96bd-ea54ad64bd65"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"\<\"OBJECT_NAME\"\>", "\[Rule]", "\<\"ISS (ZARYA)\"\>"}], ",", 
+    RowBox[{"\<\"OBJECT_ID\"\>", "\[Rule]", "\<\"1998-067A\"\>"}], ",", 
+    RowBox[{"\<\"EPOCH\"\>", 
+     "\[Rule]", "\<\"2026-03-28T03:57:10.438560\"\>"}], ",", 
+    RowBox[{"\<\"MEAN_MOTION\"\>", "\[Rule]", "15.48601072`"}], ",", 
+    RowBox[{"\<\"ECCENTRICITY\"\>", "\[Rule]", "0.00062264`"}], ",", 
+    RowBox[{"\<\"INCLINATION\"\>", "\[Rule]", "51.6345`"}], ",", 
+    RowBox[{"\<\"RA_OF_ASC_NODE\"\>", "\[Rule]", "341.0267`"}], ",", 
+    RowBox[{"\<\"ARG_OF_PERICENTER\"\>", "\[Rule]", "240.9881`"}], ",", 
+    RowBox[{"\<\"MEAN_ANOMALY\"\>", "\[Rule]", "119.0483`"}], ",", 
+    RowBox[{"\<\"EPHEMERIS_TYPE\"\>", "\[Rule]", "0"}], ",", 
+    RowBox[{"\<\"CLASSIFICATION_TYPE\"\>", "\[Rule]", "\<\"U\"\>"}], ",", 
+    RowBox[{"\<\"NORAD_CAT_ID\"\>", "\[Rule]", "25544"}], ",", 
+    RowBox[{"\<\"ELEMENT_SET_NO\"\>", "\[Rule]", "999"}], ",", 
+    RowBox[{"\<\"REV_AT_EPOCH\"\>", "\[Rule]", "55919"}], ",", 
+    RowBox[{"\<\"BSTAR\"\>", "\[Rule]", "0.00024002995`"}], ",", 
+    RowBox[{"\<\"MEAN_MOTION_DOT\"\>", "\[Rule]", "0.00012619`"}], ",", 
+    RowBox[{"\<\"MEAN_MOTION_DDOT\"\>", "\[Rule]", "0"}]}], "}"}], 
+  "[", "\<\"MEAN_MOTION\"\>", "]"}]], "Output",
+ CellChangeTimes->{3.983702940021854*^9},
+ CellLabel->"Out[22]=",ExpressionUUID->"0e6c63cf-b5be-4acc-ad4b-e12ddccadaaa"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"n", "=", 
+   RowBox[{"Quantity", "[", 
+    RowBox[{
+     RowBox[{"2.0", " ", "Pi", " ", 
+      RowBox[{"iss", "[", "\"\<MEAN_MOTION\>\"", "]"}]}], ",", 
+     RowBox[{"\"\<Radians\>\"", "/", "\"\<Days\>\""}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"a", "=", 
+  RowBox[{"SemimajorAxisFromMeanMotion", "[", "n", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"OrbitalPeriod", "[", "a", "]"}]}], "Input",
+ CellChangeTimes->{{3.9837026589314947`*^9, 3.983702661575767*^9}, {
+  3.983702907266458*^9, 3.983702928906686*^9}, {3.98370313161975*^9, 
+  3.98370313185468*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"c6c3c039-166e-4381-bda0-5d63caa44202"],
+
+Cell[BoxData[
+ TemplateBox[{"6.798954542419269`*^6", "\"m\"", "meters", "\"Meters\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{{3.9837026481213923`*^9, 3.9837026619041862`*^9}, {
+  3.9837029157367373`*^9, 3.983702929826272*^9}, {3.983703122368208*^9, 
+  3.983703132465166*^9}},
+ CellLabel->"Out[12]=",ExpressionUUID->"113f3eac-a443-4c35-8f90-8d8a4cf972bc"],
+
+Cell[BoxData[
+ TemplateBox[{"5579.228993327205`", "\"s\"", "seconds", "\"Seconds\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{{3.9837026481213923`*^9, 3.9837026619041862`*^9}, {
+  3.9837029157367373`*^9, 3.983702929826272*^9}, {3.983703122368208*^9, 
+  3.9837031324662724`*^9}},
+ CellLabel->"Out[13]=",ExpressionUUID->"39d02f9e-f4dd-4b2e-9fa0-98dd7824044e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   RowBox[{"Quantity", "[", 
+    RowBox[{"15.4", ",", 
+     RowBox[{"\"\<Revolutions\>\"", "/", "\"\<Days\>\""}]}], "]"}], ",", 
+   RowBox[{"\"\<Radians\>\"", "/", "\"\<Seconds\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.983702750124906*^9, 3.983702775509166*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"71caa85f-eda3-4be6-b3fc-13570c23df93"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "UnitConvert", "compat", 
+   "\"\\!\\(\\*FractionBox[\\\"\\\\\\\"Revolutions\\\\\\\"\\\", \
+\\\"\\\\\\\"Days\\\\\\\"\\\"]\\) and \\!\\(\\*FractionBox[\\\"\\\\\\\"Radians\
+\\\\\\\"\\\", \\\"\\\\\\\"Seconds\\\\\\\"\\\"]\\) are incompatible units.\"", 
+   2, 16, 6, 26050462971841024054, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.983702778781061*^9},
+ CellLabel->
+  "During evaluation of \
+In[16]:=",ExpressionUUID->"912107da-3ca4-4060-977e-d8602c3a122a"],
+
+Cell[BoxData["$Failed"], "Output",
+ CellChangeTimes->{3.98370277878474*^9},
+ CellLabel->"Out[16]=",ExpressionUUID->"27530578-8730-4ee1-83e3-a9aa0da2178f"]
+}, Open  ]]
+},
+WindowSize->{1470, 894},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"15.0 for Mac OS X ARM (64-bit) (March 27, 2026)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"1a75a139-4152-4a56-95a1-842be62d2480"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[554, 20, 177, 2, 29, "Input",ExpressionUUID->"7167b919-b179-4277-b95b-98dba7be2aca"],
+Cell[CellGroupData[{
+Cell[756, 26, 258, 4, 29, "Input",ExpressionUUID->"04ab4cf7-c4a3-47d3-a7bf-892016814df7"],
+Cell[1017, 32, 234, 3, 33, "Output",ExpressionUUID->"89720f3b-e49d-462a-b25b-ff0565f78fb8"]
+}, Open  ]],
+Cell[1266, 38, 215, 3, 29, "Input",ExpressionUUID->"f4f077ae-4f79-40d8-a81a-ab8415a3dc6f"],
+Cell[CellGroupData[{
+Cell[1506, 45, 196, 3, 29, "Input",ExpressionUUID->"bd647794-12f3-407d-abeb-5aee922206f4"],
+Cell[1705, 50, 14959, 354, 212, "Output",ExpressionUUID->"919e0b20-c724-4148-8644-14daeb89aabb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16701, 409, 258, 4, 29, "Input",ExpressionUUID->"ecc04c0c-6da2-419e-b3d1-c52101de5f99"],
+Cell[16962, 415, 1435, 24, 74, "Output",ExpressionUUID->"9a139e86-bef2-410c-b0c8-6c1b36a3c79a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18434, 444, 1367, 37, 213, "Input",ExpressionUUID->"4bf3c035-4c00-4508-a182-391ca1136fb3"],
+Cell[19804, 483, 313, 6, 33, "Output",ExpressionUUID->"89ccfc25-c7b0-4e10-949d-4d425ff9bcc5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20154, 494, 666, 16, 151, "Input",ExpressionUUID->"e4acda17-4782-4054-93a2-dca08e4a10ce"],
+Cell[20823, 512, 233, 4, 35, "Output",ExpressionUUID->"c64664ca-32de-4bc7-82ef-41f7d731516e"],
+Cell[21059, 518, 230, 4, 33, "Output",ExpressionUUID->"3f80f116-961a-4fa7-a77c-cde393a3a786"],
+Cell[21292, 524, 356, 8, 33, "Output",ExpressionUUID->"b9651bb5-791b-431b-ba9f-92073b2b4a3a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21685, 537, 311, 6, 29, "Input",ExpressionUUID->"a180d17a-c86a-4f4d-b14c-fb7e2c801ebd"],
+Cell[21999, 545, 232, 4, 33, "Output",ExpressionUUID->"d7492b11-93b6-4dde-920b-f4430cf22eee"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22268, 554, 260, 5, 29, "Input",ExpressionUUID->"9a9e5dd9-33a2-4a55-8f35-992b3e9d7019"],
+Cell[22531, 561, 184, 2, 33, "Output",ExpressionUUID->"524c67d8-96bf-4a24-a117-4033327f3540"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22752, 568, 290, 5, 29, "Input",ExpressionUUID->"8ed75dba-7f75-48a3-8914-6d9c79fb29d6"],
+Cell[23045, 575, 272, 4, 33, "Output",ExpressionUUID->"7bc20394-9667-4788-bd60-c1f9607b630f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23354, 584, 153, 2, 29, "Input",ExpressionUUID->"df039d6b-0ae8-4940-96bd-ea54ad64bd65"],
+Cell[23510, 588, 1415, 24, 74, "Output",ExpressionUUID->"0e6c63cf-b5be-4acc-ad4b-e12ddccadaaa"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24962, 617, 686, 14, 70, "Input",ExpressionUUID->"c6c3c039-166e-4381-bda0-5d63caa44202"],
+Cell[25651, 633, 361, 6, 35, "Output",ExpressionUUID->"113f3eac-a443-4c35-8f90-8d8a4cf972bc"],
+Cell[26015, 641, 362, 6, 33, "Output",ExpressionUUID->"39d02f9e-f4dd-4b2e-9fa0-98dd7824044e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26414, 652, 403, 8, 29, "Input",ExpressionUUID->"71caa85f-eda3-4be6-b3fc-13570c23df93"],
+Cell[26820, 662, 526, 12, 38, "Message",ExpressionUUID->"912107da-3ca4-4060-977e-d8602c3a122a"],
+Cell[27349, 676, 154, 2, 33, "Output",ExpressionUUID->"27530578-8730-4ee1-83e3-a9aa0da2178f"]
+}, Open  ]]
+}
+]
+*)
+

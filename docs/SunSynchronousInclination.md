@@ -1,4 +1,4 @@
-# BraheSunSynchronousInclination
+# SunSynchronousInclination
 
 ## Description
 
@@ -6,7 +6,7 @@ This function computes the required inclination for a sun-synchronous orbit with
 
 ## Usage
 
-BraheSunSynchronousInclination[a, e] computes the inclination [rad] for a sun-synchronous orbit.
+SunSynchronousInclination[a, e] computes the inclination [rad] for a sun-synchronous orbit.
 
 ## Notes
 
@@ -23,13 +23,13 @@ The function returns the inclination as a Quantity object with units of "Radians
 Compute the inclination for a sun-synchronous orbit at 7,000,000 meters altitude and zero eccentricity:
 
 ```wolfram
-BraheSunSynchronousInclination[7000000.0, 0.0]
+SunSynchronousInclination[7000000.0, 0.0]
 (* Quantity[1.708221, "Radians"] *)
 ```
 
 Convert the result to degrees for easier interpretation:
 
 ```wolfram
-UnitConvert[BraheSunSynchronousInclination[7000000.0, 0.0], "Degrees"]
+UnitConvert[SunSynchronousInclination[7000000.0, 0.0], "Degrees"]
 (* Quantity[97.874, "Degrees"] *)
 ```

@@ -1,4 +1,4 @@
-# BraheApogeeVelocity
+# ApogeeVelocity
 
 ## Description
 
@@ -6,7 +6,7 @@ This function computes the apogee velocity for an orbit with semi-major axis `a`
 
 ## Usage
 
-BraheApogeeVelocity[a, e] computes the apogee velocity for an orbit with semi-major axis `a` and eccentricity `e`.
+ApogeeVelocity[a, e] computes the apogee velocity for an orbit with semi-major axis `a` and eccentricity `e`.
 
 ## Notes
 
@@ -23,13 +23,13 @@ The function returns the apogee velocity as a Quantity object with units of "Met
 Compute the apogee velocity for a semi-major axis of 7,000,000 meters and eccentricity 0.1:
 
 ```wolfram
-BraheApogeeVelocity[7000000.0, 0.1]
+ApogeeVelocity[7000000.0, 0.1]
 (* Quantity[6825.662019, ("Meters")/("Seconds")] *)
 ```
 
 Compute the apogee velocity using a Quantity object:
 
 ```wolfram
-BraheApogeeVelocity[Quantity[7000, "Kilometers"], 0.1]
+ApogeeVelocity[Quantity[7000, "Kilometers"], 0.1]
 (* Quantity[6825.662019, ("Meters")/("Seconds")] *)
 ```
